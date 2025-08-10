@@ -1,57 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: grey;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        table, th, td {
+            border: 2px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        img {
+            width: 400px;
+        }
+
+        .form-section {
+            background-color: grey;
+            padding: 20px;
+            color: white;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"] {
+            padding: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 8px;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
 <body>
 
-<div style="background-color: grey;">
-    <h1 style="text-align: center;">My online store</h1>
-</div>
-<table border="2" style="width: 60%; height: 60px; text-align: center; margin: auto;">
-    <tr>
-    <th>item</th>
-    <th>image</th>
-    <th>price</th>
-    <th>link</th>
-    </tr>
-    <tr>
-        <td>iphone</td>
-        <td><img src="../MIDEA/iphone.jpg" style="width: 400px; "></td>
-        <td> 5005</td>
-        <td><a href="https://www.google.com">Apple.com
-        </a></td>
-    </tr>
-    <tr>
-        <td>Samsung</td>
-        <td><img src="../MIDEA/samsung.jpg" style="width: 400px;" ></td>
-        <td>3005</td>
-        <td><a href="https://www.google.com">Samsung.com</a></td>
-    </tr>
-    <tr>
-        <td>One plus</td>
-        <td><img src="../MIDEA/one.jpg" style="width: 400px;" ></td>
-        <td>3505</td>
-        <td><a href="https://www.google.com">OnePlus.com</a></td>
-    </tr>
-</table>
-<div style="background-color: grey;">
+    <header>
+        <h1>My Online Store</h1>
+    </header>
 
-<h1>Request your device now</h1>
-<form action="https://www.google.com">
-    <label>Name</label>
-    <input type="text" required>
-    <label >Email</label>
-    <input type="email" required>
-    <label>Date of Birth</label>
-    <input type="date">
-    <input type="submit">
-</form>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Link</th>
+        </tr>
+        <tr>
+            <td>iPhone</td>
+            <td><img src="./MIDEA/iphone.jpg" alt="iPhone"></td>
+            <td>5005</td>
+            <td><a href="https://www.apple.com" target="_blank">Apple.com</a></td>
+        </tr>
+        <tr>
+            <td>Samsung</td>
+            <td><img src="./MIDEA/samsung.jpg" alt="Samsung Phone"></td>
+            <td>3005</td>
+            <td><a href="https://www.samsung.com" target="_blank">Samsung.com</a></td>
+        </tr>
+        <tr>
+            <td>OnePlus</td>
+            <td><img src="./MIDEA/one.jpg" alt="OnePlus Phone"></td>
+            <td>3505</td>
+            <td><a href="https://www.oneplus.com" target="_blank">OnePlus.com</a></td>
+        </tr>
+    </table>
 
+    <div class="form-section">
+        <h1>Request Your Device Now</h1>
+        <form action="https://www.google.com" method="GET">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
 
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 
-</div>
 </body>
-
-
-
 </html>
